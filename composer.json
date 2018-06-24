@@ -1,0 +1,26 @@
+{
+    "name": "administrator/edphp-test",
+    "authors": [
+        {
+            "name": "edwardsbean",
+            "email": "edwardsbean@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "F:/workspace/edphp",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "edphp/framework": "@dev"
+    }
+}
