@@ -9,7 +9,9 @@ define('EDPHP_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
 
-$app = new edphp\App;
+$app = new edphp\App(
+    realpath(__DIR__.'/../')
+);
 
 // 执行应用并响应
 $app->run()->send();
