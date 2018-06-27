@@ -11,6 +11,6 @@ class Test {
 
     public function getConfig($name = 'database.type')
     {
-        return "your config $name is " . config($name);
+        return "your config $name is" . var_export(config($name), true);
     }
 }

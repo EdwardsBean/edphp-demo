@@ -9,11 +9,9 @@ class ControllerCost extends Interceptor
     
     public function preHandle()
     {
-        echo "ControllerCost interceptor preHandle\n";
     }
 
     public function afterCompletion() {
-        echo "ControllerCost interceptor afterCompletion\n";
     }
     
 }
