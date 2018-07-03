@@ -11,7 +11,28 @@ class Api {
 
     public function accounts()
     {
-        $result = db('accounts')->findbyOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA');
+        abort(50, "ceshi");
+        $result = db('accounts')->findByOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA')->getOne();
+        // $result = db('accounts')->findByOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA')->getOne();
+        // $result = db('accounts')->whereLike('openid', 'o')->order('create_time', 'asc')->get();
         return $result;
+    }
+
+    public function update() {
+        $result = db('accounts')->whereOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA')->setField('test', true);
+        // $result = db('accounts')->whereOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA')->inc('size')->update();
+        return $result === 1 ? 'ok' : 'fail';
+    }
+
+    public function add()
+    {
+        
+    }
+
+    public function del()
+    {
+        # code...
+        $result = db('accounts')->whereOpenid('oH30b5CFedAcV9J9bzkJBC4-iVDA')->delete();
+        return $result === 1 ? 'ok' : 'fail';
     }
 }
